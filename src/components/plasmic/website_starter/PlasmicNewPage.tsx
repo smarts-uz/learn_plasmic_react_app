@@ -78,7 +78,7 @@ export const PlasmicNewPage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicNewPage__OverridesType = {
   root?: Flex__<"div">;
-  button?: Flex__<typeof Button>;
+  freeBox?: Flex__<"div">;
 };
 
 export interface DefaultNewPageProps {
@@ -123,12 +123,26 @@ function PlasmicNewPage__RenderFunc(props: {
             sty.root
           )}
         >
-          <Button
-            data-plasmic-name={"button"}
-            data-plasmic-override={overrides.button}
-            className={classNames("__wab_instance", sty.button)}
-            color={"blue"}
-          />
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
+          >
+            <Button
+              className={classNames("__wab_instance", sty.button__bzj6)}
+              color={"blue"}
+            />
+
+            <Button
+              className={classNames("__wab_instance", sty.button__jJtGz)}
+              color={"blue"}
+            />
+
+            <Button
+              className={classNames("__wab_instance", sty.button__aHqk0)}
+              color={"blue"}
+            />
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -136,15 +150,15 @@ function PlasmicNewPage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "button"],
-  button: ["button"]
+  root: ["root", "freeBox"],
+  freeBox: ["freeBox"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  button: typeof Button;
+  freeBox: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -207,7 +221,7 @@ export const PlasmicNewPage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    button: makeNodeComponent("button"),
+    freeBox: makeNodeComponent("freeBox"),
 
     // Metadata about props expected for PlasmicNewPage
     internalVariantProps: PlasmicNewPage__VariantProps,
