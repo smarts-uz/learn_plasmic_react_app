@@ -79,6 +79,7 @@ export const PlasmicNewPage__ArgProps = new Array<ArgPropType>();
 export type PlasmicNewPage__OverridesType = {
   root?: Flex__<"div">;
   freeBox?: Flex__<"div">;
+  svg?: Flex__<"svg">;
 };
 
 export interface DefaultNewPageProps {
@@ -129,17 +130,25 @@ function PlasmicNewPage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.freeBox)}
           >
             <Button
+              className={classNames("__wab_instance", sty.button__aHqk0)}
+              color={"blue"}
+              endIcon={
+                <IconIcon
+                  data-plasmic-name={"svg"}
+                  data-plasmic-override={overrides.svg}
+                  className={classNames(projectcss.all, sty.svg)}
+                  role={"img"}
+                />
+              }
+            />
+
+            <Button
               className={classNames("__wab_instance", sty.button__bzj6)}
               color={"blue"}
             />
 
             <Button
               className={classNames("__wab_instance", sty.button__jJtGz)}
-              color={"blue"}
-            />
-
-            <Button
-              className={classNames("__wab_instance", sty.button__aHqk0)}
               color={"blue"}
             />
           </div>
@@ -150,8 +159,9 @@ function PlasmicNewPage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox"],
-  freeBox: ["freeBox"]
+  root: ["root", "freeBox", "svg"],
+  freeBox: ["freeBox", "svg"],
+  svg: ["svg"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -159,6 +169,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   freeBox: "div";
+  svg: "svg";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -222,6 +233,7 @@ export const PlasmicNewPage = Object.assign(
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
+    svg: makeNodeComponent("svg"),
 
     // Metadata about props expected for PlasmicNewPage
     internalVariantProps: PlasmicNewPage__VariantProps,

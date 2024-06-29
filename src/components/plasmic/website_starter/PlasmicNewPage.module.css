@@ -24,26 +24,41 @@
 .freeBox {
   display: flex;
   position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-evenly;
   width: 100%;
   height: auto;
   max-width: 100%;
   min-width: 0;
   padding: 8px;
 }
-.button__bzj6:global(.__wab_instance) {
+.button__aHqk0:global(.__wab_instance) {
   max-width: 100%;
-  position: relative;
 }
-.svg__kqdzX {
+.svg__x0Iw {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__qJYp3 {
+.svg {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.button__bzj6:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__h7MYt {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__b2RA {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -53,28 +68,13 @@
   max-width: 100%;
   position: relative;
 }
-.svg__slmPm {
+.svg__fKvj {
   position: relative;
   object-fit: cover;
   width: auto;
   height: 1em;
 }
-.svg__cbejn {
-  position: relative;
-  object-fit: cover;
-  width: auto;
-  height: 1em;
-}
-.button__aHqk0:global(.__wab_instance) {
-  max-width: 100%;
-}
-.svg__yBDl {
-  position: relative;
-  object-fit: cover;
-  width: auto;
-  height: 1em;
-}
-.svg___9SLw {
+.svg___0Ozw {
   position: relative;
   object-fit: cover;
   width: auto;
